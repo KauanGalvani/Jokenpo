@@ -1,6 +1,6 @@
 # Jogo Pedra, Papel e Tesoura
 
-![](docs\JokenpoVideo.gif)
+![](docs/JokenpoVideo.gif)
 
 ## Descrição
 
