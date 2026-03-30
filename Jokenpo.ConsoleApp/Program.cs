@@ -4,37 +4,53 @@ namespace Jokenpo.ConsoleApp
 {
     class Program
     {
-        static void Main(string[] args)
-        {
 
+        static string? Cabecalho()
+        {
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Jogo pedra, pale e tesoura");
+            Console.WriteLine("-----------------------------");
+
+            Console.WriteLine("");
+
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("(1) - para jogar PAPEL");
+            Console.WriteLine("(2) - para jogar PEDRA");
+            Console.WriteLine("(3) - para jogar TESOURA");
+            Console.WriteLine("---------------------------------");
+
+            Console.Write("Escolha qual sua opção para jogar: ");
+
+            return Console.ReadLine();
+        }
+
+        static string Escolha(string escolha)
+        {
             while (true)
             {
-                Console.WriteLine("-----------------------------");
-                Console.WriteLine("Jogo pedra, pale e tesoura");
-                Console.WriteLine("-----------------------------");
-
-                Console.WriteLine("");
-
-                Console.WriteLine("---------------------------------");
-                Console.WriteLine("(1) - para jogar PAPEL");
-                Console.WriteLine("(2) - para jogar PEDRA");
-                Console.WriteLine("(3) - para jogar TESOURA");
-                Console.WriteLine("---------------------------------");
-
-                Console.Write("Escolha qual sua opção para jogar: ");
-                string? escolhaJogador = Console.ReadLine();
-
-                switch (escolhaJogador)
+                switch (escolha)
                 {
-                    case "1": escolhaJogador = "Papel"; break;
-                    case "2": escolhaJogador = "Pedra"; break;
-                    case "3": escolhaJogador = "Tesoura"; break;
+                    case "1": escolha = "Papel"; break;
+                    case "2": escolha = "Pedra"; break;
+                    case "3": escolha = "Tesoura"; break;
                     default:
                         Console.WriteLine("escolha uma opção valida. ");
                         Console.ReadLine();
                         Console.Clear();
                         continue;
                 }
+                return escolha;
+            }  
+        }
+        static void Main(string[] args)
+        {
+
+            while (true)
+            {
+
+                string? escolhaJogador = Cabecalho();
+
+                string jogadorDecisao = Escolha(escolhaJogador);
 
                 string[] jokenpoPC = ["Pedra", "Papel", "Tesoura"];
 
@@ -61,7 +77,7 @@ namespace Jokenpo.ConsoleApp
                 }
 
                 Console.WriteLine("");
-                
+
                 Console.WriteLine("Deseja jogar novamente? (S/N)");
                 string? devContinuar = Console.ReadLine()?.ToUpper();
 

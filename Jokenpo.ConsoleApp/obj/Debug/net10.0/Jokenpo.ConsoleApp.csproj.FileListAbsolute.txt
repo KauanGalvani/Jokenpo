@@ -12,3 +12,4 @@ C:\Users\kauan\Documents\CursoADP\Jokenpo\jokenpo.ConsoleApp\obj\Debug\net10.0\r
 C:\Users\kauan\Documents\CursoADP\Jokenpo\jokenpo.ConsoleApp\obj\Debug\net10.0\Jokenpo.ConsoleApp.pdb
 C:\Users\kauan\Documents\CursoADP\Jokenpo\jokenpo.ConsoleApp\obj\Debug\net10.0\Jokenpo.ConsoleApp.genruntimeconfig.cache
 C:\Users\kauan\Documents\CursoADP\Jokenpo\jokenpo.ConsoleApp\obj\Debug\net10.0\ref\Jokenpo.ConsoleApp.dll
+C:\Users\kauan\Documents\CursoADP\Jokenpo\jokenpo.ConsoleApp\obj\Debug\net10.0\Jokenpo.ConsoleApp.sourcelink.json
