@@ -4,40 +4,51 @@
     {
         static void Main(string[] args)
         {
-
             while (true)
             {
-                Console.WriteLine("-----------------------------");
-                Console.WriteLine("Jogo pedra, pale e tesoura");
-                Console.WriteLine("-----------------------------");
+                string? decisaoDoJogador = Jogadores.CabecalhoEscolhaJoador();
 
-                Console.WriteLine("");
+                string escolhaComputador = Jogadores.EscolhaDoComputador();
 
-                Console.WriteLine("---------------------------------");
-                Console.WriteLine("(1) - para jogar PAPEL");
-                Console.WriteLine("(2) - para jogar PEDRA");
-                Console.WriteLine("(3) - para jogar TESOURA");
-                Console.WriteLine("---------------------------------");
+                CheckResultado.ResultadoDoJogo(decisaoDoJogador, escolhaComputador);
 
-                Console.Write("Escolha qual sua opção para jogar: ");
-                string? escolhaJogador = Console.ReadLine();
+                if (!DevContinuar()) break;
+                else continue;
+            }
+        }
+        static bool DevContinuar()
+        {
+            while (true)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow; //mudar a cor no console para amarelo.
+                Console.WriteLine("Deseja jogar novamente? (S/N)");
+                string? devContinuar = Console.ReadLine()?.ToUpper();
 
-                switch (escolhaJogador)
+                if (string.IsNullOrEmpty(devContinuar))
                 {
-                    case "1":
-                        escolhaJogador = "Papel";
-                        break;
-                    case "2":
-                        escolhaJogador = "Pedra";
-                        break;
-                    case "3":
-                        escolhaJogador = "Tesoura";
-                        break;
-                    default:
-                        Console.WriteLine("escolha uma opção valida. ");
-                        continue;
+                    Console.WriteLine("Digite um valor conforme foi pedido!! ");
+                    continue;
                 }
+                else
+                {
+                    Console.ResetColor(); //reseta ao padrão
 
+                    if (devContinuar != "S")
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("");
+                        Console.WriteLine("Você esta fechando o jogo obrigado por jogar...");
+                        Console.WriteLine("Pressione ENTER para sair...");
+                        Console.ReadLine();
+                        Console.ResetColor();
+                        return false;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        return true;
+                    }
+                }
             }
         }
     }
