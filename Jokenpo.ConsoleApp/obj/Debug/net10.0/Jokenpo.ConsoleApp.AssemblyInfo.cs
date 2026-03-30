@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jokenpo.ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d86763be55665f0eadd971ad2147133c583584f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b1561be2d33666c7174f674a4365707a823aab7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jokenpo.ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jokenpo.ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
